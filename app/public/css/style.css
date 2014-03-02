@@ -1,0 +1,283 @@
+@import url(http://fonts.googleapis.com/css?family=Buenard:400,700&subset=latin,latin-ext);
+		
+body,
+html {
+	height:100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+    /*background: #000 url(../img/background.jpg) center no-repeat;*/
+    background: linear-gradient(to right, #109E03 0%, #96F06A 100%);
+    color: #fff;
+    font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+}
+
+.jobs, nav .months a {
+	font-family: 'Buenard', serif;
+	font-size: 1.4em;
+}
+
+#page {
+	min-height: 100%;
+	position: relative;
+}
+
+nav {
+	width: 550px;
+	height: 550px;
+	position: relative;
+	margin: auto;
+	z-index: 1;
+}
+
+nav .months a {
+	color: #957027;
+	text-decoration: none;
+	position: absolute;
+	transition: color 0.5s;
+}
+
+nav .months a:hover,
+nav .months a.hovering {
+	color: #725D2A;
+}
+
+nav .months a.jan {
+	top: -10px;
+	left: 320px;
+}
+
+nav .months a.feb {
+	top: 60px;
+	left: 430px;
+}
+
+nav .months a.mar {
+	top: 180px;
+	left: 500px;
+}
+
+nav .months a.apr {
+	top: 310px;
+	left: 500px;
+}
+
+nav .months a.may {
+	top: 430px;
+	left: 430px;
+}
+
+nav .months a.jun {
+	top: 490px;
+	left: 310px;
+}
+
+nav .months a.jul {
+	top: 490px;
+	left: 180px;
+}
+
+nav .months a.aug {
+	top: 430px;
+	left: 60px;	
+}
+
+nav .months a.sep {
+	top: 310px;
+	left: -20px;
+}
+
+nav .months a.oct {
+	top: 180px;
+	left: -10px;
+}
+
+nav .months a.nov {
+	top: 60px;
+	left: 50px;
+}
+
+nav .months a.dec {
+	top: -10px;
+	left: 160px;
+}
+
+.circle-nav {
+	width: 650px;
+	height: 650px;
+}
+
+#navigation {
+	margin: 0 auto;
+}
+
+#winter {
+	fill: #3BBFF0;
+}
+
+#autumn {
+	fill: #F0811C;
+	
+}
+
+#spring {
+	fill: #70B62E;
+}
+
+#summer {
+	fill: #EEE419;
+}
+
+.season:hover {
+	opacity: 0.5;
+}
+
+.season {
+	transition: opacity 1s;
+	opacity: 1;
+}
+
+.finials.outer path {
+	fill: #AAFC7A;
+}
+
+.finials.inner path {
+	fill: #E4F3F6;
+}
+
+.hidden {
+	display: none;
+}
+
+.months path {
+	fill: #444;
+	transition: opacity 1s;
+	opacity: 0;
+}
+
+.months path:hover,
+.months path.hovering {
+	opacity: 0.4;
+}
+
+.dividers {
+	stroke: #000;  
+	stroke-width: 3;
+}
+
+.jobs {
+	z-index: 2;
+	width: 60%;
+	background-color: rgba(255,255,255,0.9);
+	position: relative;
+	margin: 10px auto 0 auto;
+	padding: 20px 20px 0 20px;
+}
+
+.jobs dl {
+	margin: 0 0 10px 0;
+}
+
+.jobs dt,
+.jobs dd,
+.jobs ul,
+.jobs h2,
+.jobs p {
+	color: #725D2A;
+	margin: 0;
+	padding: 0 0 20px 0;
+}
+
+.jobs ul {
+	margin: 0 0 0 1em;
+}
+
+.jobs.ng-enter,
+.jobs.ng-leave {
+	transition: 2s opacity;
+}
+
+.jobs.ng-enter {
+    opacity: 0;
+}
+.jobs.ng-enter-active {
+	opacity: 1;
+}
+.jobs.ng-leave {
+	opacity: 1;
+}
+.jobs.ng-leave-active {
+	opacity: 0;
+}
+
+.robin {
+	background: url(/img/robins.png) no-repeat;
+	position: absolute;
+	display: block;
+	height: 120px;
+	width: 100px;
+	z-index: 3;
+}
+
+.robin.Jan {
+	background-position: 0 0;
+	top: -30px;
+	left: 320px;
+}
+.robin.Feb {
+	background-position: -202px 0;
+	top: 40px;
+	left: 400px;
+}
+.robin.Mar {
+	background-position: -404px 0;
+	top: 160px;
+	left: 460px;
+}
+.robin.Apr {
+	background-position: -495px 0;
+	top: 280px;
+	left: 420px;
+}
+.robin.May {
+	background-position: -400px 0;
+	top: 280px;
+	left: 420px;
+}
+.robin.Jun {
+	background-position: -500px 0;
+	top: 380px;
+	left: 345px;
+}
+.robin.Jul {
+	background-position: -585px 0;
+	top: 405px;
+	left: 90px;
+}
+.robin.Aug {
+	background-position: -680px 0;
+	top: 300px;
+	left: 20px;
+}
+.robin.Sep {
+	background-position: -770px 0;
+	top: 300px;
+	left: 20px;
+}
+.robin.Oct {
+	background-position: -865px 0;
+	top: 190px;
+	left: -10px;
+}
+.robin.Nov {
+	background-position: -970px 0;
+	top: 80px;
+	left: 15px;
+}
+.robin.Dec {
+	background-position: -1070px 0;
+	top: 10px;
+	left: 105px;
+}

@@ -1,0 +1,10 @@
+<div class="jobs">
+	<a href="#" ng-click="jobs.open = !jobs.open">Close</a>
+	<div ng-repeat="job in jobs">
+		<h2>{{ job.name }}</h2>
+		<div ng-repeat="description in job.description">
+			<p>{{ description }}</p>
+		</div>
+		
+	</div>
+</div>
