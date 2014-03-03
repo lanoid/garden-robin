@@ -194,24 +194,6 @@ nav .months a.dec {
 	margin: 0 0 0 1em;
 }
 
-.jobs.ng-enter,
-.jobs.ng-leave {
-	transition: 2s opacity;
-}
-
-.jobs.ng-enter {
-    opacity: 0;
-}
-.jobs.ng-enter-active {
-	opacity: 1;
-}
-.jobs.ng-leave {
-	opacity: 1;
-}
-.jobs.ng-leave-active {
-	opacity: 0;
-}
-
 .robin {
 	background: url(/img/robins.png) no-repeat;
 	position: absolute;
@@ -281,3 +263,28 @@ nav .months a.dec {
 	top: 10px;
 	left: 105px;
 }
+
+.view {
+	transition: all 5s ease;
+}
+
+.view.ng-enter,
+.view.ng-leave {
+	transition: all 5s ease;
+}
+
+.view.ng-enter {
+	opacity: 1;
+}
+
+/*.view.ng-enter-active {
+	opacity: 1;
+}*/
+
+.view.ng-leave {
+	opacity: 0;
+}
+
+/*.view.ng-leave-active {
+	opacity: 0;
+}*/

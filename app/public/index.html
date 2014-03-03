@@ -1,36 +1,27 @@
 <!DOCTYPE html>
-<html ng-app="gardenRobin">
+<html>
 <head>
 	<meta charset="UTF-8" />
 	<title>Garden Robin</title>
-
-	<script type="text/javascript" src="js/lib/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-animate.min.js"></script>
 	
 	<link type="text/css" href="css/style.css" rel="stylesheet" media="all" />
+
+	<script src="js/lib/angular.min-1.2.14.js"></script>
+	<script src="js/lib/angular-route.min-1.2.14.js"></script>
+	<script src="js/lib/angular-animate.min-1.2.14.js"></script>
+	
+	
 </head>
-<body>
+<body ng-app="gardenRobin">
 	<div id="page" ng-controller="jobsCtrl">
 		<div ng-include src="'/partials/header.html'"></div>
-		<ng-view></ng-view>
+
+		<ng-view class="view"></ng-view>
+		
 		<nav>
 			<!-- Don't remove this line -->
 			<div date class="robin {{ month | date:'MMM' }}"></div>
 			<!-- Don't remove this line -->
-			
-			<!-- <div date class="robin Jan"></div>
-			<div date class="robin Feb"></div>
-			<div date class="robin Mar"></div>
-			<div date class="robin Apr"></div>
-			<div date class="robin May"></div>
-			<div date class="robin Jun"></div>
-			<div date class="robin Jul"></div>
-			<div date class="robin Aug"></div>
-			<div date class="robin Sep"></div>
-			<div date class="robin Oct"></div>
-			<div date class="robin Nov"></div>
-			<div date class="robin Dec"></div> -->
 			<div class="months">
 				<a class="jan" href="#/jobs/jan" month-hover>Jan</a>
 				<a class="feb" href="#/jobs/feb" month-hover>Feb</a>

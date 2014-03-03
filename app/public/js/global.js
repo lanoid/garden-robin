@@ -1,6 +1,6 @@
-var gardenRobin = angular.module('gardenRobin', ['ngAnimate','ngRoute']);
+var gardenRobin = angular.module('gardenRobin', ['ngRoute','ngAnimate']);
 
-gardenRobin.config(function($routeProvider){
+gardenRobin.config(function($routeProvider,$locationProvider){
 	$routeProvider
 		.when('/jobs/:month',{
 			templateUrl: 'partials/jobs.html',
@@ -75,7 +75,9 @@ gardenRobin.directive('date', function(){
 });
 
 gardenRobin.controller('jobsCtrl', function($scope,$routeParams,Jobs){
+
 	var jobs = new Jobs({month:$routeParams.month});
+
 	jobs.loadJobs();
 	$scope.jobs = jobs.jobs;
 	$scope.jobs.open = true;
