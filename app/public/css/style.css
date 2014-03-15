@@ -151,6 +151,10 @@ nav .months a.dec {
 	display: none;
 }
 
+.months {
+	display: none;
+}
+
 .months path {
 	fill: #444;
 	transition: opacity 1s;
@@ -265,26 +269,26 @@ nav .months a.dec {
 }
 
 .view {
-	transition: all 5s ease;
+	transition: opacity 1s ease;
 }
 
 .view.ng-enter,
 .view.ng-leave {
-	transition: all 5s ease;
+	transition: opacity 1s ease;
 }
 
 .view.ng-enter {
-	opacity: 1;
+	opacity: 0;
 }
 
-/*.view.ng-enter-active {
+.view.ng-enter-active {
 	opacity: 1;
-}*/
+}
 
 .view.ng-leave {
-	opacity: 0;
+	opacity: 1;
 }
 
-/*.view.ng-leave-active {
+.view.ng-leave-active {
 	opacity: 0;
-}*/
+}

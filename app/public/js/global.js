@@ -5,6 +5,10 @@ gardenRobin.config(function($routeProvider,$locationProvider){
 		.when('/jobs/:month',{
 			templateUrl: 'partials/jobs.html',
 			controller: 'jobsCtrl'
+		})
+		.when('/photos/:season',{
+			templateUrl: 'partials/photos.html',
+			controller: 'photosCtrl'
 		});
 });
 
@@ -18,7 +22,7 @@ gardenRobin.factory('Jobs', function($rootScope){
 		var jobs = this;
 
 		var query = angular.copy(this.query);
-
+console.log(query);
 		dpd.jobs.get(query, function(result){
 			Array.prototype.push.apply(jobs.jobs, result);
 			$rootScope.$apply();
@@ -28,12 +32,33 @@ gardenRobin.factory('Jobs', function($rootScope){
 	return Jobs;
 });
 
+gardenRobin.factory('Photos', function($rootScope){
+	var Photos = function Photos(query){
+		this.query = query || {};
+		this.photos = [];
+	};
+
+	Photos.prototype.loadPhotos = function(){
+		var photos = this;
+
+		var query = angular.copy(this.query);
+
+		dpd.photos.get(query, function(result){
+			Array.prototype.push.apply(photos.photos, result);
+			console.log(result);
+			$rootScope.$apply();
+		});
+	}
+
+	return Photos;
+});
+
 gardenRobin.directive('svgClick', function($location){
 	return {
 		link : function($scope, iElement, iAttrs, controller){
 			iElement.bind('click', function(){
 				$scope.$apply(function() {
-				  $location.path($(iElement).data('month'));
+				  $location.path($(iElement).data('query'));
 				});
 			});
 		}
@@ -75,10 +100,17 @@ gardenRobin.directive('date', function(){
 });
 
 gardenRobin.controller('jobsCtrl', function($scope,$routeParams,Jobs){
-
 	var jobs = new Jobs({month:$routeParams.month});
 
 	jobs.loadJobs();
 	$scope.jobs = jobs.jobs;
 	$scope.jobs.open = true;
+});
+
+gardenRobin.controller('photosCtrl', function($scope,$routeParams,Photos){
+	var photos = new Photos({season:$routeParams.season});
+
+	photos.loadPhotos();
+	$scope.photos = photos.photos;
+	$scope.photos.open = true;
 });

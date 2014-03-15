@@ -1,0 +1,8 @@
+<div class="photos">
+	<a href="#" ng-click="photos.open = !photos.open">Close</a>
+
+	<div ng-repeat="photo in photos">
+		<img src="/img/photos/{{ photo.file }}.jpg" />
+		<p>{{ photo.description }}</p>
+	</div>
+</div>
