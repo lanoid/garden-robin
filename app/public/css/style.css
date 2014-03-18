@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Buenard:400,700&subset=latin,latin-ext);
-		
+
 body,
 html {
 	height:100%;
@@ -23,7 +23,11 @@ body {
 	min-height: 100%;
 	position: relative;
 }
-
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
 nav {
 	width: 550px;
 	height: 550px;
@@ -81,7 +85,7 @@ nav .months a.jul {
 
 nav .months a.aug {
 	top: 430px;
-	left: 60px;	
+	left: 60px;
 }
 
 nav .months a.sep {
@@ -119,7 +123,7 @@ nav .months a.dec {
 
 #autumn {
 	fill: #F0811C;
-	
+
 }
 
 #spring {
@@ -152,7 +156,7 @@ nav .months a.dec {
 }
 
 .months {
-	display: none;
+	/*display: none;*/
 }
 
 .months path {
@@ -167,7 +171,7 @@ nav .months a.dec {
 }
 
 .dividers {
-	stroke: #000;  
+	stroke: #000;
 	stroke-width: 3;
 }
 
@@ -268,20 +272,16 @@ nav .months a.dec {
 	left: 105px;
 }
 
-.view {
-	transition: opacity 1s ease;
+/*.view {
+	opacity: 0;
 }
-
-.view.ng-enter,
-.view.ng-leave {
-	transition: opacity 1s ease;
-}
-
+*/
 .view.ng-enter {
+	transition: 2s linear all;
 	opacity: 0;
 }
 
-.view.ng-enter-active {
+.view.ng-enter.ng-enter-active {
 	opacity: 1;
 }
 
@@ -289,6 +289,67 @@ nav .months a.dec {
 	opacity: 1;
 }
 
-.view.ng-leave-active {
+.view.ng-leave.ng-leave-active {
 	opacity: 0;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
 }
