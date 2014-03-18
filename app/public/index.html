@@ -15,9 +15,9 @@
 <body ng-app="gardenRobin">
 	<div id="page" ng-controller="jobsCtrl">
 		<div ng-include src="'/partials/header.html'"></div>
-
-		<ng-view class="view"></ng-view>
-		
+		<div class="page">
+			<div ng-view class="view"></div>
+		</div>
 		<nav>
 			<!-- Don't remove this line -->
 			<div date class="robin {{ month | date:'MMM' }}"></div>
@@ -37,8 +37,6 @@
 				<a class="dec" href="#/jobs/dec" month-hover>Dec</a>
 			</div>
 			<svg version="1.1" class="circle-nav" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" xml:space="preserve" viewbox="0 0 400 400">
-			
-				<path class="dividers" d="M88.856,36.301L160.274,160 M36.575,88.582 L160.274,160 M160.274,160H17.438 M36.575,231.418L160.274,160 M160.274,160L88.856,283.699 M160.274,302.836V160 M160.274,160 l71.418,123.699 M283.974,231.418L160.274,160 M160.274,160H303.11 M283.974,88.582L160.274,160 M160.274,160l71.418-123.699 M160.274,17.164V160"/>
 				
 				<g class="seasons">
 					<path id="winter" class="season" data-query="photos/winter" svg-click svg-hover d="M19.346,183.83c9.401-114.775,93.796-167.868,140.734-24.433 c23.357-51.906,104.093-93.332,141.335,20.08C314.412,83.952,236.41,15.262,159.914,15.868 C82.911,16.478,4.234,84.788,19.346,183.83z" />

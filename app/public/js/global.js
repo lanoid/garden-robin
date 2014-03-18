@@ -19,10 +19,9 @@ gardenRobin.factory('Jobs', function($rootScope){
 	};
 
 	Jobs.prototype.loadJobs = function(){
-		var jobs = this;
+		var jobs = this,
+			query = angular.copy(this.query);
 
-		var query = angular.copy(this.query);
-console.log(query);
 		dpd.jobs.get(query, function(result){
 			Array.prototype.push.apply(jobs.jobs, result);
 			$rootScope.$apply();
@@ -39,9 +38,8 @@ gardenRobin.factory('Photos', function($rootScope){
 	};
 
 	Photos.prototype.loadPhotos = function(){
-		var photos = this;
-
-		var query = angular.copy(this.query);
+		var photos = this,
+			query = angular.copy(this.query);
 
 		dpd.photos.get(query, function(result){
 			Array.prototype.push.apply(photos.photos, result);
