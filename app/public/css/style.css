@@ -8,10 +8,19 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-    /*background: #000 url(../img/background.jpg) center no-repeat;*/
     background: linear-gradient(to right, #109E03 0%, #96F06A 100%);
     color: #fff;
-    font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+    font: 300 100.1% 'Buenard';
+}
+
+h1 {
+	margin: 0;
+}
+
+.header {
+	position: absolute;
+	top: 5%;
+	left: 5%;
 }
 
 .jobs, nav .months a {
@@ -20,19 +29,22 @@ body {
 }
 
 #page {
-	min-height: 100%;
-	position: relative;
+
 }
+
 .page {
-	position: absolute;
+	/*border: 1px solid black;*/
+	position: relative;
 	width: 100%;
-	height: 100%;
+	height: auto;
 }
+
 nav {
 	width: 550px;
 	height: 550px;
-	position: relative;
-	margin: auto;
+	left: 50%;
+	position: absolute;
+	margin: 10% 0 0 -275px;
 	z-index: 1;
 }
 
@@ -175,13 +187,19 @@ nav .months a.dec {
 	stroke-width: 3;
 }
 
-.jobs {
-	z-index: 2;
-	width: 60%;
+.jobs,
+.photos {
+	z-index: 3;
 	background-color: rgba(255,255,255,0.9);
-	position: relative;
-	margin: 10px auto 0 auto;
+	width: 60vw;
 	padding: 20px 20px 0 20px;
+	position: absolute;
+	margin: 2vw -30vw 2vw;
+	left: 50%
+}
+
+.photos img {
+	width: 100%;
 }
 
 .jobs dl {
@@ -192,7 +210,8 @@ nav .months a.dec {
 .jobs dd,
 .jobs ul,
 .jobs h2,
-.jobs p {
+.jobs p,
+.photos p {
 	color: #725D2A;
 	margin: 0;
 	padding: 0 0 20px 0;
@@ -208,7 +227,7 @@ nav .months a.dec {
 	display: block;
 	height: 120px;
 	width: 100px;
-	z-index: 3;
+	z-index: 2;
 }
 
 .robin.Jan {
@@ -272,12 +291,8 @@ nav .months a.dec {
 	left: 105px;
 }
 
-/*.view {
-	opacity: 0;
-}
-*/
-.view.ng-enter {
-	transition: 2s linear all;
+/*.view.ng-enter {
+	transition: 0.5s linear all;
 	opacity: 0;
 }
 
@@ -291,7 +306,7 @@ nav .months a.dec {
 
 .view.ng-leave.ng-leave-active {
 	opacity: 0;
-}
+}*/
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen

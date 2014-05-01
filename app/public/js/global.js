@@ -43,7 +43,6 @@ gardenRobin.factory('Photos', function($rootScope){
 
 		dpd.photos.get(query, function(result){
 			Array.prototype.push.apply(photos.photos, result);
-			console.log(result);
 			$rootScope.$apply();
 		});
 	}
