@@ -5,5 +5,3 @@ Angular single page Gardening website, to show jobs and images on a per season b
 
 
 ##Dependencies
-
-[DPD](http://deployd.com/)
