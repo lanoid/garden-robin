@@ -291,6 +291,32 @@ nav .months a.dec {
 	left: 105px;
 }
 
+aside.vcard {
+	background-color: rgba(255,255,255,0.9);
+	padding: 10px;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	text-align: right;
+	width: 20%;
+}
+
+aside.vcard ul {
+	margin: 0;
+	padding: 0;
+}
+
+aside.vcard ul,
+aside.vcard ul li {
+	list-style-position: outside;
+	list-style: none;
+}
+
+aside.vcard ul li,
+aside.vcard ul li a {
+	color: #725D2A;
+}
+
 /*.view.ng-enter {
 	transition: 0.5s linear all;
 	opacity: 0;
