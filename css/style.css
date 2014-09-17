@@ -3,14 +3,19 @@
 body,
 html {
 	height:100%;
+	position: relative;
+	width: 100%;
 }
 
 body {
+	background: linear-gradient(to right, #109E03 0%, #96F06A 100%);
+	color: #fff;
 	margin: 0;
 	padding: 0;
-    background: linear-gradient(to right, #109E03 0%, #96F06A 100%);
-    color: #fff;
+	position: relative;
     font: 300 100.1% 'Buenard';
+    height: 100%;
+    width: 100%;
 }
 
 h1 {
@@ -29,22 +34,19 @@ h1 {
 }
 
 #page {
-
+	position: fixed;
+	height: 100%;
+    width: 100%;
 }
 
 .page {
-	/*border: 1px solid black;*/
-	position: relative;
-	width: 100%;
-	height: auto;
 }
 
 nav {
-	width: 550px;
-	height: 550px;
-	left: 50%;
-	position: absolute;
-	margin: 10% 0 0 -275px;
+	display: block;
+	margin: 5% auto 0 auto;
+	position: relative;
+	width: 650px;
 	z-index: 1;
 }
 
@@ -61,63 +63,63 @@ nav .months a.hovering {
 }
 
 nav .months a.jan {
-	top: -10px;
-	left: 320px;
+	top: 2%;
+	left: 73%;
 }
 
 nav .months a.feb {
-	top: 60px;
-	left: 430px;
+	top: 21%;
+	left: 95%;
 }
 
 nav .months a.mar {
-	top: 180px;
-	left: 500px;
+	top: 47%;
+	left: 101%;
 }
 
 nav .months a.apr {
-	top: 310px;
-	left: 500px;
+	top: 72%;
+	left: 94%;
 }
 
 nav .months a.may {
-	top: 430px;
-	left: 430px;
+	top: 92%;
+	left: 76%;
 }
 
 nav .months a.jun {
-	top: 490px;
-	left: 310px;
+	top: 98%;
+	left: 47%;
 }
 
 nav .months a.jul {
-	top: 490px;
-	left: 180px;
+	top: 93%;
+	left: 22%;
 }
 
 nav .months a.aug {
-	top: 430px;
-	left: 60px;
+	top: 73%;
+	left: 2%;
 }
 
 nav .months a.sep {
-	top: 310px;
-	left: -20px;
+	top: 47%;
+	left: -7%;
 }
 
 nav .months a.oct {
-	top: 180px;
-	left: -10px;
+	top: 22%;
+	left: 1%;
 }
 
 nav .months a.nov {
-	top: 60px;
-	left: 50px;
+	top: 3%;
+	left: 19%;
 }
 
 nav .months a.dec {
-	top: -10px;
-	left: 160px;
+	top: -4%;
+	left: 47%;
 }
 
 .circle-nav {
@@ -191,11 +193,14 @@ nav .months a.dec {
 .photos {
 	z-index: 3;
 	background-color: rgba(255,255,255,0.9);
-	width: 60vw;
-	padding: 20px 20px 0 20px;
+	top: 10%; left: 10%; bottom: 10%; right: 10%;
+	padding: 20px;
 	position: absolute;
-	margin: 2vw -30vw 2vw;
-	left: 50%
+	height: 80%;
+}
+.content {
+	height: 100%;
+	overflow: scroll;
 }
 
 .photos img {
@@ -218,7 +223,20 @@ nav .months a.dec {
 }
 
 .jobs ul {
-	margin: 0 0 0 1em;
+	
+}
+
+.jobs ul li {
+	list-style-type: none;
+	margin: 0 0 .5em 1em;
+	position: relative;
+}
+
+.jobs ul li:before {
+	content: '›';
+	position: absolute;
+	left: -.8em;
+	height: 100%;
 }
 
 .robin {
@@ -232,63 +250,63 @@ nav .months a.dec {
 
 .robin.Jan {
 	background-position: 0 0;
-	top: -30px;
-	left: 320px;
+	top: -5%;
+	left: 60%;
 }
 .robin.Feb {
 	background-position: -202px 0;
-	top: 40px;
-	left: 400px;
+	top: 15%;
+	left: 82%;
 }
 .robin.Mar {
 	background-position: -404px 0;
-	top: 160px;
-	left: 460px;
+	top: 36%;
+	left: 89%;
 }
 .robin.Apr {
 	background-position: -495px 0;
-	top: 280px;
-	left: 420px;
+	top: 58%;
+	left: 81%;
 }
 .robin.May {
 	background-position: -400px 0;
-	top: 280px;
-	left: 420px;
+	top: 74%;
+	left: 66%;
 }
 .robin.Jun {
 	background-position: -500px 0;
-	top: 380px;
-	left: 345px;
+	top: 81%;
+	left: 45%;
 }
 .robin.Jul {
 	background-position: -585px 0;
-	top: 405px;
-	left: 90px;
+	top: 76%;
+	left: 19%;
 }
 .robin.Aug {
 	background-position: -680px 0;
-	top: 300px;
-	left: 20px;
+	top: 60%;
+	left: 5%;
 }
 .robin.Sep {
 	background-position: -770px 0;
-	top: 300px;
-	left: 20px;
+	top: 60%;
+	left: 3%;
 }
 .robin.Oct {
 	background-position: -865px 0;
-	top: 190px;
-	left: -10px;
+	top: 39%;
+	left: 0%;
 }
 .robin.Nov {
 	background-position: -970px 0;
-	top: 80px;
-	left: 15px;
+	top: 18%;
+	left: 5%;
 }
 .robin.Dec {
 	background-position: -1070px 0;
-	top: 10px;
-	left: 105px;
+	top: 3%;
+	left: 20%;
 }
 
 aside.vcard {
@@ -317,80 +335,6 @@ aside.vcard ul li a {
 	color: #725D2A;
 }
 
-/*.view.ng-enter {
-	transition: 0.5s linear all;
-	opacity: 0;
-}
+@media screen and ( max-width : 480px ){
 
-.view.ng-enter.ng-enter-active {
-	opacity: 1;
-}
-
-.view.ng-leave {
-	opacity: 1;
-}
-
-.view.ng-leave.ng-leave-active {
-	opacity: 0;
-}*/
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-/* Styles */
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen
-and (min-width : 321px) {
-/* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 320px) {
-/* Styles */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-/* Styles */
-}
-
-/* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
-/* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
-/* Styles */
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
 }

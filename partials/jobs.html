@@ -1,12 +1,1 @@
-<div class="jobs">
-	<a href="/#" >Close</a>
-	<div ng-repeat="job in jobs">
-		<h2>{{ job.name }}</h2>
-		<div ng-repeat="description in job.description">
-			<p>{{ description }}</p>
-		</div>
-		<ul ng-repeat="season in job.season">
-			<a href="#/photos/{{ season }}">{{ season }}</a></li>
-		</ul>
-	</div>
-</div>
+<div class="jobs" ng-include src="templateUrl"></div>
