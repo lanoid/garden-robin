@@ -201,6 +201,7 @@ nav .months a.dec {
 .content {
 	height: 100%;
 	overflow: scroll;
+	position: relative;
 }
 
 .photos img {
@@ -220,6 +221,33 @@ nav .months a.dec {
 	color: #725D2A;
 	margin: 0;
 	padding: 0 0 20px 0;
+}
+
+.jobs h2 a {
+	font-size: 1.8rem;
+	opacity: .8;
+	cursor: pointer;
+}
+
+.jobs .close {
+	height: 1em;
+	width: 1em;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 2em;
+	z-index: 3;
+}
+
+.jobs .close:before {
+	color: #725D2A;
+	position: absolute;
+	top: -24%;
+	left: 40%;
+	content: '+';
+	display: inline-block;
+	transfrom: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 }
 
 .jobs ul {
