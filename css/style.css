@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-	margin: 0;
+	margin: 20px 0 0 20px;
 }
 
 .header {
@@ -46,8 +46,13 @@ nav {
 	display: block;
 	margin: 5% auto 0 auto;
 	position: relative;
-	width: 650px;
+	height: 0;
+	padding-bottom: 80%;
 	z-index: 1;
+}
+.circle-nav {
+	width: 100%;
+	height: 100%;
 }
 
 nav .months a {
@@ -120,11 +125,6 @@ nav .months a.nov {
 nav .months a.dec {
 	top: -4%;
 	left: 47%;
-}
-
-.circle-nav {
-	width: 650px;
-	height: 650px;
 }
 
 #navigation {
@@ -230,6 +230,7 @@ nav .months a.dec {
 }
 
 .jobs .close {
+	cursor: pointer;
 	height: 1em;
 	width: 1em;
 	position: absolute;
@@ -339,12 +340,9 @@ nav .months a.dec {
 
 aside.vcard {
 	background-color: rgba(255,255,255,0.9);
+	display: inline-block;
+	margin-left: 20px;
 	padding: 10px;
-	position: fixed;
-	top: 10px;
-	right: 10px;
-	text-align: right;
-	width: 20%;
 }
 
 aside.vcard ul {
@@ -363,6 +361,30 @@ aside.vcard ul li a {
 	color: #725D2A;
 }
 
-@media screen and ( max-width : 480px ){
+@media screen and ( min-width : 480px ){
+	nav {
+		max-width: 60%;
+		padding-bottom: 60%;
+	}
+}
 
+@media screen and ( max-width : 480px ){
+	/*nav {
+		transform: scale(.5,.5);
+		height: 325px;
+		width: 325px;
+	}
+	.circle-nav {
+		height: 325px;
+		width: 325px;
+	}*/
+	.jobs,
+	.photos {
+		z-index: 3;
+		background-color: rgba(255,255,255,0.9);
+		top: 5px; left: 5px; bottom: 5px; right: 5px;
+		padding: 20px;
+		position: absolute;
+		height: auto;
+	}
 }
