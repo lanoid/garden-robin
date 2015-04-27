@@ -1,4 +1,4 @@
-var gardenRobin = angular.module('gardenRobin', ['ngRoute']);
+var gardenRobin = angular.module('gardenRobin', ['ngRoute','ngAnimate']);
 
 
 gardenRobin.config(function($routeProvider,$locationProvider){

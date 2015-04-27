@@ -44,13 +44,18 @@ h1 {
 
 nav {
 	display: block;
-	margin: 5% auto 0 auto;
-	position: relative;
-	height: 0;
-	padding-bottom: 80%;
+	margin: 50px auto 0;
+	position: relative;	
 	z-index: 1;
 }
+nav:after {
+	content: '';
+	display: block;
+	padding-bottom: 0;
+}
 .circle-nav {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
 	width: 100%;
 	height: 100%;
 }
@@ -59,7 +64,11 @@ nav .months a {
 	color: #957027;
 	text-decoration: none;
 	position: absolute;
+	text-align: center;
 	transition: color 0.5s;
+	transform: translateX(-50%);
+	width: 4em;
+	z-index: 2;
 }
 
 nav .months a:hover,
@@ -68,23 +77,23 @@ nav .months a.hovering {
 }
 
 nav .months a.jan {
-	top: 2%;
-	left: 73%;
+	top: -2%;
+	left: 76%;
 }
 
 nav .months a.feb {
-	top: 21%;
-	left: 95%;
+	top: 16%;
+	left: 94%;
 }
 
 nav .months a.mar {
-	top: 47%;
-	left: 101%;
+	top: 45%;
+	left: 105%;
 }
 
 nav .months a.apr {
 	top: 72%;
-	left: 94%;
+	left: 97%;
 }
 
 nav .months a.may {
@@ -94,37 +103,37 @@ nav .months a.may {
 
 nav .months a.jun {
 	top: 98%;
-	left: 47%;
+	left: 50%;
 }
 
 nav .months a.jul {
-	top: 93%;
-	left: 22%;
+	top: 92%;
+	left: 24%;
 }
 
 nav .months a.aug {
 	top: 73%;
-	left: 2%;
+	left: 4%;
 }
 
 nav .months a.sep {
-	top: 47%;
+	top: 45%;
 	left: -7%;
 }
 
 nav .months a.oct {
-	top: 22%;
-	left: 1%;
+	top: 16%;
+	left: 4%;
 }
 
 nav .months a.nov {
-	top: 3%;
-	left: 19%;
+	top: -2%;
+	left: 24%;
 }
 
 nav .months a.dec {
-	top: -4%;
-	left: 47%;
+	top: -8%;
+	left: 50%;
 }
 
 #navigation {
@@ -171,6 +180,7 @@ nav .months a.dec {
 
 .months {
 	/*display: none;*/
+	z-index: 2;
 }
 
 .months path {
@@ -191,12 +201,14 @@ nav .months a.dec {
 
 .jobs,
 .photos {
+	box-shadow: 0 0 2px #725D2A;
 	z-index: 3;
 	background-color: rgba(255,255,255,0.9);
-	top: 10%; left: 10%; bottom: 10%; right: 10%;
 	padding: 20px;
+	top: 10%; left: 10%; bottom: 10%; right: 10%;
 	position: absolute;
 	height: 80%;
+	overflow: hidden;
 }
 .content {
 	height: 100%;
@@ -361,23 +373,19 @@ aside.vcard ul li a {
 	color: #725D2A;
 }
 
+nav {
+	max-width: 80%;
+	padding-bottom: 80%;
+}
+
 @media screen and ( min-width : 480px ){
 	nav {
-		max-width: 60%;
-		padding-bottom: 60%;
+		max-width: 40%;
+		padding-bottom: 40%;
 	}
 }
 
 @media screen and ( max-width : 480px ){
-	/*nav {
-		transform: scale(.5,.5);
-		height: 325px;
-		width: 325px;
-	}
-	.circle-nav {
-		height: 325px;
-		width: 325px;
-	}*/
 	.jobs,
 	.photos {
 		z-index: 3;
